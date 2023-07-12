@@ -1,1 +1,3 @@
-#define ABS(Value)
+#define ABS(Value) 1
+
+
