@@ -3,5 +3,5 @@
 
 int	main(void)
 {
-	printf("%d ", ABS(Value));
+	printf("%d", ABS(Value));
 }
