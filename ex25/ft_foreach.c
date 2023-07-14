@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 09:03:30 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/14 17:53:58 by vcesar-v         ###   ########.fr       */
+/*   Created: 2023/07/13 21:57:43 by vcesar-v          #+#    #+#             */
+/*   Updated: 2023/07/14 17:33:25 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
-
-typedef struct t_point
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	int		x;
-	int		y;
-}		t_point;
+	int	matriz_index;
 
-#endif
+	matriz_index = 0;
+	if (tab)
+		while (matriz_index < length)
+			f(tab[matriz_index++]);
+}
