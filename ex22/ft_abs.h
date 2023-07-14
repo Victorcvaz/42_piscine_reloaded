@@ -6,11 +6,12 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 09:03:44 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/14 17:53:43 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/14 20:14:23 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ABS(Value)
+
 # define ABS(Value) 1
 
 #endif
