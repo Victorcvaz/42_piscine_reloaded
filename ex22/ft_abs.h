@@ -6,12 +6,13 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 09:03:44 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/14 20:14:23 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/14 20:56:38 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ABS(Value)
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-# define ABS(Value) 1
+# define ABS(value) ((value < 0) ? -value : value)
 
 #endif

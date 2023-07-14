@@ -6,21 +6,19 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:30:32 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/11 14:51:38 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/14 20:33:57 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	count;
+	int	root;
 
-	count = 1;
-	if (nb == 0)
-		return (0);
-	while (count * count < nb)
-		count++;
-	if (nb % count == 0)
-		return (count);
+	root = 1;
+	while (root * root < nb)
+		root++;
+	if (root * root == nb)
+		return (root);
 	return (0);
 }
 
