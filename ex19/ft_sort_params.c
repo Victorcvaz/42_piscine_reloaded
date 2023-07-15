@@ -6,7 +6,7 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:57:20 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/11 17:46:53 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/14 21:11:41 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(int argc, char *argv[])
 		while (++index < argc - 1)
 		{
 			bubble = 0;
-			if (ft_strcmp(argv[index], argv[index + 1]) < 0)
+			if (ft_strcmp(argv[index], argv[index + 1]) > 0)
 			{
 				tmp = argv[index];
 				argv[index] = argv[index + 1];
@@ -53,9 +53,9 @@ int	main(int argc, char *argv[])
 			}
 		}
 	}
-	while (--argc > 0)
+	while (++bubble < argc)
 	{
-		ft_putstr(argv[argc]);
+		ft_putstr(argv[bubble]);
 		ft_putchar('\n');
 	}
 }
