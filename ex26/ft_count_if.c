@@ -6,7 +6,7 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 19:36:19 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/14 19:44:14 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/14 21:01:02 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_count_if(char **tab, int (*f)(char*))
 	matriz_index = 0;
 	while (tab[matriz_index])
 	{
-		if (f(tab[matriz_index] == 1))
+		if (f(tab[matriz_index]) == 1)
 			count++;
 		matriz_index++;
 	}
