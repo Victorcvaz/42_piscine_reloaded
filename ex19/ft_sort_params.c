@@ -6,18 +6,11 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 15:57:20 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/14 22:02:59 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/14 22:09:59 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// void	ft_putchar(char c);
-
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
