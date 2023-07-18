@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_display_file.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 09:03:44 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/17 15:06:37 by vcesar-v         ###   ########.fr       */
+/*   Created: 2023/07/18 14:47:45 by vcesar-v          #+#    #+#             */
+/*   Updated: 2023/07/18 14:50:37 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+#ifndef FT_DISPLAY_FILE_H
+# define FT_DISPLAY_FILE_H
 
-# define ABS(value) ((value < 0) ? -value : value)
+# define BUFFER_SIZE 10000
 
 #endif
