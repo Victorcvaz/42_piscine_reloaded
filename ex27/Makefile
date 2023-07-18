@@ -1,12 +1,13 @@
 NAME = ft_display_file
 SRC = *.c
-LIB = *.h
+OBJ = *.o
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -c -Wall -Wextra -Werror
 
 $(NAME):
-	$(CC) $(FLAGS) $(SRC) -I$(LIB) -o $(NAME)
-
+	$(CC) $(FLAGS) $(SRC)
+	gcc -Wall -Wextra -Werror $(OBJ) -o $(NAME)
+	
 all: $(NAME)
 
 clean:
