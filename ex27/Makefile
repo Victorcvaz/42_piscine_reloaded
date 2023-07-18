@@ -14,5 +14,6 @@ clean:
 
 fclean: clean
 	rm -f *.o
+	rm -f *.a
 
 re: fclean all

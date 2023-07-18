@@ -6,13 +6,12 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 14:43:09 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/18 17:42:52 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/18 17:51:14 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <fcntl.h>
-#include "ft_display_file.h"
 
 void	display_error(int option)
 {
@@ -28,7 +27,7 @@ char	*ft_read_file(char *buffer, char *name)
 	int	read_byte;
 
 	file = open(name, O_RDONLY);
-	read_byte = read(file, buffer, BUFFER_SIZE);
+	read_byte = read(file, buffer, 10001);
 	buffer[read_byte] = '\0';
 	close(file);
 	return (buffer);
@@ -36,7 +35,7 @@ char	*ft_read_file(char *buffer, char *name)
 
 int	main(int argc, char *argv[])
 {
-	char	buffer[BUFFER_SIZE + 1];
+	char	buffer[10001];
 	int		count;
 
 	count = -1;

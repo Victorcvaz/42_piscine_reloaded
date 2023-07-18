@@ -6,7 +6,7 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:04:57 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/17 15:51:23 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/18 17:49:30 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ int	ft_iterative_factorial(int nb)
 // {
 // 	printf("%d", ft_iterative_factorial(13));
 // }
-
