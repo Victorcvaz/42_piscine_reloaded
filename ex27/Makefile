@@ -1,20 +1,21 @@
 NAME = ft_display_file
-SRC = *.c
-OBJ = *.o
+SRC = ft_display_file.c
+OBJ = $(SRC:.c=.o)
 CC = gcc
 FLAGS = -c -Wall -Wextra -Werror
 
-$(NAME):
-	$(CC) $(FLAGS) $(SRC)
-	gcc -Wall -Wextra -Werror $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	gcc $(OBJ) -o $(NAME)
 	
+%.o: %.c
+	$(CC) $(FLAGS) $< -o $@
+
 all: $(NAME)
 
 clean:
-	rm -f $(NAME)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -f *.o
-	rm -f *.a
+	rm -f $(NAME)
 
 re: fclean all
