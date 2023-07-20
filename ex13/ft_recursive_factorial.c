@@ -6,13 +6,13 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:23:11 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/18 17:50:00 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/19 22:20:17 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_recursive_factorial(int nb)
 {
-	if (nb < 0)
+	if (nb < 0 || nb > 12)
 		return (0);
 	if (nb == 1 | nb == 0)
 		return (1);
