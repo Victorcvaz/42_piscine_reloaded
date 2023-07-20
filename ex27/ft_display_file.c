@@ -6,45 +6,35 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 14:43:09 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/19 22:41:26 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/19 22:56:21 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <fcntl.h>
 
-void	display_error(int option)
+void	ft_display_file(int fd)
 {
-	if (option == 1)
-		write(1, "File name missing.", 19);
-	else
-		write(1, "Too many arguments.", 20);
-}
+	char	buffer;
 
-char	*ft_read_file(char *buffer, char *name)
-{
-	int	file;
-	int	read_byte;
-
-	file = open(name, O_RDONLY);
-	read_byte = read(file, buffer, 10000);
-	buffer[read_byte] = '\0';
-	close(file);
-	return (buffer);
+	while (read(fd, &buffer, 1) != 0)
+		write(1, &buffer, 1);
 }
 
 int	main(int argc, char *argv[])
 {
-	char	buffer[10000 + 1];
-	int		count;
+	int	fd;
 
-	count = -1;
 	if (argc != 2)
-		display_error(argc);
-	else
 	{
-		ft_read_file(buffer, argv[1]);
-		while (buffer[++count])
-			write(1, &buffer[count], 1);
+		if (argc == 1)
+			write(2, "Too many arguments.\n", 20);
+		else
+			write(2, "File name missing.\n", 19);
+		return (0);
 	}
+	fd = open(argv[1], O_RDONLY);
+	ft_display_file(fd);
+	close(fd);
+	return (0);
 }
