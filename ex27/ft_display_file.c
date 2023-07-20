@@ -6,7 +6,7 @@
 /*   By: vcesar-v <vcesar-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 14:43:09 by vcesar-v          #+#    #+#             */
-/*   Updated: 2023/07/19 22:15:53 by vcesar-v         ###   ########.fr       */
+/*   Updated: 2023/07/19 22:41:26 by vcesar-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 void	display_error(int option)
 {
 	if (option == 1)
-		write(1, "File name missing.\n", 20);
+		write(1, "File name missing.", 19);
 	else
-		write(1, "Too many arguments.\n", 20);
+		write(1, "Too many arguments.", 20);
 }
 
 char	*ft_read_file(char *buffer, char *name)
@@ -47,5 +47,4 @@ int	main(int argc, char *argv[])
 		while (buffer[++count])
 			write(1, &buffer[count], 1);
 	}
-	write(1, "\n", 1);
 }
